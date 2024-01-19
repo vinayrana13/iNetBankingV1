@@ -1,0 +1,5 @@
+2024-01-10 18:07:23 INFO  ebanking:12 - Navigated to the requested URL
+2024-01-10 18:07:23 INFO  ebanking:15 - Entered the Username
+2024-01-10 18:07:23 INFO  ebanking:17 - Entered the Password
+2024-01-10 18:07:24 INFO  ebanking:19 - Clicked on Submit
+2024-01-10 18:07:24 INFO  ebanking:25 - Login Test Passed

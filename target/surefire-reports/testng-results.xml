@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-19T21:31:01Z" name="Suite1" finished-at="2024-01-19T21:41:26Z" duration-ms="625051">
+    <groups>
+    </groups>
+    <test started-at="2024-01-19T21:31:01Z" name="BankingApp Test" finished-at="2024-01-19T21:41:26Z" duration-ms="625051">
+      <class name="TestCases.TC_LoginTest_001">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCases.TC_LoginTest_001@306e95ec]" started-at="2024-01-19T16:31:02Z" name="setup" finished-at="2024-01-19T16:31:06Z" duration-ms="4042" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:0, instance:TestCases.TC_LoginTest_001@306e95ec]" started-at="2024-01-19T16:31:06Z" name="loginTest" finished-at="2024-01-19T16:31:06Z" duration-ms="599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.TC_LoginTest_001@306e95ec]" started-at="2024-01-19T16:31:06Z" name="teardown" finished-at="2024-01-19T16:31:06Z" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.TC_LoginTest_001 -->
+      <class name="TestCases.TC_AddCustomer_003">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCases.TC_AddCustomer_003@434a63ab]" started-at="2024-01-19T16:31:06Z" name="setup" finished-at="2024-01-19T16:31:08Z" duration-ms="1700" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addCustomer()[pri:0, instance:TestCases.TC_AddCustomer_003@434a63ab]" started-at="2024-01-19T16:31:08Z" name="addCustomer" finished-at="2024-01-19T16:41:15Z" duration-ms="606939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.TC_AddCustomer_003@434a63ab]" started-at="2024-01-19T16:41:15Z" name="teardown" finished-at="2024-01-19T16:41:16Z" duration-ms="575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.TC_AddCustomer_003 -->
+      <class name="TestCases.TC_AddNewAccount_004">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestCases.TC_AddNewAccount_004@37d4349f]" started-at="2024-01-19T16:41:16Z" name="setup" finished-at="2024-01-19T16:41:19Z" duration-ms="3674" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addNewAccount()[pri:0, instance:TestCases.TC_AddNewAccount_004@37d4349f]" started-at="2024-01-19T16:41:19Z" name="addNewAccount" finished-at="2024-01-19T16:41:26Z" duration-ms="6959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewAccount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.TC_AddNewAccount_004@37d4349f]" started-at="2024-01-19T16:41:26Z" name="teardown" finished-at="2024-01-19T16:41:26Z" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.TC_AddNewAccount_004 -->
+    </test> <!-- BankingApp Test -->
+  </suite> <!-- Suite1 -->
+</testng-results>

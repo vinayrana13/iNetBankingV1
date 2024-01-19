@@ -1,0 +1,12 @@
+myPackage\LaunchBrowser.class
+PageObjects\AddCustomerPage.class
+Utilities\ReadConfig.class
+TestCases\TC_AddNewAccount_004.class
+TestCases\BaseClass.class
+TestCases\TC_LoginTest_001.class
+TestCases\TC_AddCustomer_003.class
+TestCases\TC_LoginDDT_002.class
+Utilities\Reporting.class
+PageObjects\AddNewAccount.class
+PageObjects\LoginPage.class
+Utilities\XLUtils.class
