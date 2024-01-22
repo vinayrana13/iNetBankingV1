@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class OpenNewAccount {
     WebDriver ldriver;
+    static String newAccount;
 
     public OpenNewAccount(WebDriver rdriver){
         ldriver=rdriver;
@@ -22,8 +24,14 @@ public class OpenNewAccount {
     @FindBy(xpath = "//select[@id='fromAccountId']")
     WebElement drpFromAccount;
 
-    @FindBy(xpath = "//input[@type='submit']")
-    WebElement btnSubmit;
+    @FindBy(xpath = "//input[@class='button']")
+    WebElement btnOpenNewAccount;
+
+    @FindBy(xpath = "//a[@id='newAccountId']")
+    WebElement newAccountID;
+
+    @FindBy(xpath="//h1[contains(text(),'ened')]")
+    WebElement newAccountConfirmation;
 
     public void clickOnOPenNewAccount(){
         lnkOpenNewAccount.click();
@@ -37,6 +45,13 @@ public class OpenNewAccount {
         select.selectByVisibleText(selectby);
     }
     public void clickOnSubmit(){
-        btnSubmit.click();
+        btnOpenNewAccount.click();
+    }
+    public void getNewAccountId(){
+        newAccount=newAccountID.getText();
+        System.out.println("New Account ID is: "+newAccount);
+    }
+    public void verifyAccountOpened(){
+        Assert.assertTrue((newAccountConfirmation).isDisplayed());
     }
 }
