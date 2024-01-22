@@ -41,5 +41,13 @@ public class ReadConfig {
         String url2= pro.getProperty("baseurl2");
         return url2;
     }
+    public String getParaUsername(){
+        String paraUsername=pro.getProperty("paraUsername");
+        return paraUsername;
+    }
+    public String getParaPassword(){
+        String paraPassword=pro.getProperty("paraPassword");
+        return paraPassword;
+    }
     
 }

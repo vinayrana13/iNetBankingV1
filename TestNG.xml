@@ -17,7 +17,7 @@
         <parameter name="browser" value="chrome2"/>
         <classes>
             <class name="TestCases.TC_ParaBankLogin_005" />
-
+            <class name="TestCases.TC_OpenNewAccount_006"/>
         </classes>
     </test>
 </suite>

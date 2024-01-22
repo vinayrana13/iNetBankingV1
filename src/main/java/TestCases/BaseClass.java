@@ -30,6 +30,9 @@ public class BaseClass {
 
     public String url2=readConfig.getApplicationURL2();
 
+    public String paraUsername=readConfig.getParaUsername();
+    public String paraPassword=readConfig.getParaPassword();
+
     public static WebDriver driver;
     public static Logger logger;
 
