@@ -7,17 +7,19 @@
     <test name="BankingApp Test" >
         <parameter name="browser" value="chrome"/>
         <classes>
-          <class name="TestCases.TC_LoginTest_001" />
-           <!--class name="TestCases.TC_LoginDDT_002" /-->
-            <!--class name="TestCases.TC_AddCustomer_003" /-->
-            <!--class name="TestCases.TC_AddNewAccount_004" /-->
+            <class name="TestCases.TC_LoginTest_001" />
+            <class name="TestCases.TC_UnsuccessfulLogin_002" />
+            <class name="TestCases.TC_AddNewAccount_003" />
+            <class name="TestCases.TC_ChangeBillingAddress_004" />
+            <class name="TestCases.TC_AddNewAddress_005" />
+
         </classes>
     </test>
     <test name="Parabank Test" >
         <parameter name="browser" value="chrome2"/>
         <classes>
-            <class name="TestCases.TC_ParaBankLogin_005" />
-            <class name="TestCases.TC_OpenNewAccount_006"/>
+            <!--class name="TestCases.TC_ParaBankLogin_005" /-->
+            <!--class name="TestCases.TC_OpenNewAccount_006"/-->
         </classes>
     </test>
 </suite>

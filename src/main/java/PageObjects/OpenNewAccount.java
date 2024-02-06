@@ -15,43 +15,71 @@ public class OpenNewAccount {
         ldriver=rdriver;
         PageFactory.initElements(rdriver,this);
     }
-    @FindBy(xpath = "//a[text()='Open New Account']")
-    WebElement lnkOpenNewAccount;
-
-    @FindBy(xpath = "//select[@id='type']")
-    WebElement drpAccountList;
-
-    @FindBy(xpath = "//select[@id='fromAccountId']")
-    WebElement drpFromAccount;
-
-    @FindBy(xpath = "//input[@class='button']")
+    @FindBy(xpath = "//a[@class='action create primary']")
     WebElement btnOpenNewAccount;
 
-    @FindBy(xpath = "//a[@id='newAccountId']")
-    WebElement newAccountID;
+    @FindBy(xpath = "//input[@id='firstname']")
+    WebElement tbxFirstName;
 
-    @FindBy(xpath="//h1[contains(text(),'ened')]")
-    WebElement newAccountConfirmation;
+    @FindBy(xpath = "//input[@id='lastname']")
+    WebElement tbxLastName;
+
+    @FindBy(xpath = "//input[@id='email_address']")
+    WebElement tbxEmailAddress;
+
+    @FindBy(xpath = "//input[@id='password']")
+    WebElement tbxPassword;
+
+    @FindBy(xpath="//input[@id='password-confirmation']")
+    WebElement tbxConfirmPassword;
+
+    @FindBy(xpath="//div[@class='actions-toolbar']//div/button/span[text()='Create an Account']")
+    WebElement btnCreateAccount;
+
+    @FindBy(xpath="/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button")
+    WebElement btnDropdown;
+
+    @FindBy(xpath = "//li[@class='authorization-link']//a")
+    WebElement btnLogout;
+
+    @FindBy(xpath = "//strong[text()='Account Information']")
+    WebElement lblAccountInformation;
+
 
     public void clickOnOPenNewAccount(){
-        lnkOpenNewAccount.click();
-    }
-    public void selectAccountType(String selectby){
-        Select select=new Select(drpAccountList);
-        select.selectByVisibleText(selectby);
-    }
-    public void selectFromAccount(String selectby){
-        Select select=new Select(drpFromAccount);
-        select.selectByVisibleText(selectby);
-    }
-    public void clickOnSubmit(){
         btnOpenNewAccount.click();
     }
-    public void getNewAccountId(){
-        newAccount=newAccountID.getText();
-        System.out.println("New Account ID is: "+newAccount);
+    public void enterFirstName(String firstName){
+        tbxFirstName.sendKeys(firstName);
     }
-    public void verifyAccountOpened(){
-        Assert.assertTrue((newAccountConfirmation).isDisplayed());
+    public void enterLastName(String lastName){
+        tbxLastName.sendKeys(lastName);
+    }
+
+    public void enterEmailAddress(String email){
+        tbxEmailAddress.sendKeys(email);
+    }
+
+    public void enterPassword(String password){
+        tbxPassword.sendKeys(password);
+    }
+
+    public void enterConfirmPassword(String confirmPassword){
+        tbxConfirmPassword.sendKeys(confirmPassword);
+    }
+    public void clickOnSubmit(){
+
+        btnCreateAccount.click();
+    }
+    public void clickLogout(){
+        btnLogout.click();
+    }
+
+    public void clickOnDropdown(){
+        btnDropdown.click();
+    }
+
+    public void verifyAccountInfo(){
+        lblAccountInformation.isDisplayed();
     }
 }
