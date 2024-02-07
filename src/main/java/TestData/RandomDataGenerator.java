@@ -76,6 +76,11 @@ public class RandomDataGenerator {
         return faker.number().digits(10);
     }
 
+    public static String  getPosition(){
+        Faker faker=new Faker();
+        return faker.company().profession();
+    }
+
 
     public static void main(String[] args) {
         System.out.println(RandomDataGenerator.getMobileNumber());

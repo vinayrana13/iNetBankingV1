@@ -7,11 +7,14 @@
     <test name="BankingApp Test" >
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="TestCases.TC_LoginTest_001" />
-            <class name="TestCases.TC_UnsuccessfulLogin_002" />
-            <class name="TestCases.TC_AddNewAccount_003" />
-            <class name="TestCases.TC_ChangeBillingAddress_004" />
-            <class name="TestCases.TC_AddNewAddress_005" />
+            <!--class name="TestCases.TC_LoginTest_001" /-->
+            <!--class name="TestCases.TC_UnsuccessfulLogin_002" /-->
+            <!--class name="TestCases.TC_AddNewAccount_003" /-->
+            <!--class name="TestCases.TC_ChangeBillingAddress_004" /-->
+            <!--class name="TestCases.TC_AddNewAddress_005" /-->
+            <!--class name="TestCases.TC_AddProductToWishList_006"/-->
+            <!--class name="TestCases.TC_RemoveProductFromWishlist_007"/-->
+            <class name="TestCases.TC_SubscribeToOurMailingList_008"/>
 
         </classes>
     </test>

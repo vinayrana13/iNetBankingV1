@@ -3,17 +3,13 @@ package PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
-public class OpenNewAccount {
-    WebDriver ldriver;
+public class OpenNewAccount extends BaseMethods{
+
     static String newAccount;
 
-    public OpenNewAccount(WebDriver rdriver){
-        ldriver=rdriver;
-        PageFactory.initElements(rdriver,this);
+    public OpenNewAccount(WebDriver rdriver) {
+        super(rdriver);
     }
     @FindBy(xpath = "//a[@class='action create primary']")
     WebElement btnOpenNewAccount;
@@ -47,39 +43,48 @@ public class OpenNewAccount {
 
 
     public void clickOnOPenNewAccount(){
-        btnOpenNewAccount.click();
+
+        clickOn(btnOpenNewAccount);
     }
     public void enterFirstName(String firstName){
-        tbxFirstName.sendKeys(firstName);
+
+        typeInto(tbxFirstName,firstName);
     }
     public void enterLastName(String lastName){
-        tbxLastName.sendKeys(lastName);
+
+        typeInto(tbxLastName,lastName);
     }
 
     public void enterEmailAddress(String email){
-        tbxEmailAddress.sendKeys(email);
+
+        typeInto(tbxEmailAddress,email);
     }
 
     public void enterPassword(String password){
-        tbxPassword.sendKeys(password);
+
+        typeInto(tbxPassword,password);
     }
 
     public void enterConfirmPassword(String confirmPassword){
-        tbxConfirmPassword.sendKeys(confirmPassword);
+
+        typeInto(tbxPassword,confirmPassword);
     }
     public void clickOnSubmit(){
 
-        btnCreateAccount.click();
+        clickOn(btnCreateAccount);
     }
     public void clickLogout(){
-        btnLogout.click();
+
+        clickOn(btnLogout);
     }
 
     public void clickOnDropdown(){
-        btnDropdown.click();
+
+        clickOn(btnDropdown);
     }
 
     public void verifyAccountInfo(){
+
         lblAccountInformation.isDisplayed();
     }
 }

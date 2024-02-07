@@ -1,5 +1,6 @@
 package TestCases;
 
+import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import TestData.RandomDataGenerator;
 import org.testng.Assert;
@@ -10,10 +11,7 @@ import java.io.IOException;
 public class TC_LoginTest_001 extends BaseClass{
 
     @Test
-    public void loginTest() throws IOException {
-        //String fakename= RandomDataGenerator.getFirstName();
-        //System.out.println("Fake name is: "+fakename);
-
+    public void loginTest() throws IOException, InterruptedException {
 
         logger.info("TC_001 execution started");
 
@@ -27,7 +25,14 @@ public class TC_LoginTest_001 extends BaseClass{
         logger.info("Clicked on Submit");
         System.out.println(driver.getTitle());
         lp.verifyAccountInfo();
-        lp.clickOnDropdown();
+
+        HomePage homePage=new HomePage(driver);
+        homePage.clickOnImagePants();
+        homePage.clickOnLegings();
+        Thread.sleep(3000);
+
+            lp.clickOnDropdown();
+            Thread.sleep(3000);
         lp.clickLogout();
         logger.info("Clicked on Logout");
 

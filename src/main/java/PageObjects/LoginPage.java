@@ -3,15 +3,14 @@ package PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-    WebDriver ldriver;
+public class LoginPage extends BaseMethods{
 
-    public LoginPage(WebDriver rdriver){
-        ldriver=rdriver;
-        PageFactory.initElements(rdriver,this);
+
+    public LoginPage(WebDriver rdriver) {
+        super(rdriver);
     }
+
     @FindBy(name="login[username]")
     WebElement txtUserName;
 
@@ -37,33 +36,41 @@ public class LoginPage {
     WebElement btnMyAccount;
 
     public void setUserName(String uname){
-        txtUserName.sendKeys(uname);
+
+        typeInto(txtUserName,uname);
     }
 
     public void setPassword(String pwd){
 
-        txtPassword.sendKeys(pwd);
+        typeInto(txtPassword,pwd);
     }
 
     public void clickSubmit(){
-        btnLogin.click();
+
+        clickOn(btnLogin);
     }
 
     public void clickOnDropdown(){
-        btnDropdown.click();
+        clickOn(btnDropdown);
     }
 
     public void clickLogout(){
-        btnLogout.click();
+
+        clickOn(btnLogout);
     }
 
     public void verifyAccountInfo(){
+
         lblAccountInformation.isDisplayed();
     }
     public void verifyunsuccessfulLogin(){
+
         lblLoginFailure.isDisplayed();
     }
     public void clickOnMyAccount(){
-        btnMyAccount.click();
+
+        clickOn(btnMyAccount);
     }
+
+
 }

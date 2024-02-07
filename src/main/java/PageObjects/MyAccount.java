@@ -3,14 +3,11 @@ package PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class MyAccount {
-    WebDriver ldriver;
+public class MyAccount extends BaseMethods{
 
-    public MyAccount(WebDriver rdriver){
-        ldriver=rdriver;
-        PageFactory.initElements(rdriver,this);
+    public MyAccount(WebDriver rdriver) {
+        super(rdriver);
     }
 
     @FindBy(xpath="//span[text()='Manage Addresses']")
@@ -46,38 +43,54 @@ public class MyAccount {
     @FindBy(xpath = "//input[@id='telephone']")
     WebElement tbxPhoneNumber;
 
+    @FindBy(xpath = "/html/body/div[2]/main/div[2]/div[2]/div/div[2]/ul/li[4]/a")
+    WebElement lnkMyWishList;
+
     public void clickOnManageAddress(){
-        lnkManageAddress.click();
+
+        clickOn(lnkManageAddress);
     }
     public void clickOnChangeBillingAddress(){
-        lnkChangeBillingAddress.click();
+
+        clickOn(lnkChangeBillingAddress);
     }
     public void enterStreetAddress(String streetAddress){
-        tbxStreetAddress.sendKeys(streetAddress);
+
+        typeInto(tbxStreetAddress,streetAddress);
     }
     public void enterCity(String city){
-        tbxCity.sendKeys(city);
+
+        typeInto(tbxCity,city);
     }
     public void enterZipCode(String zipcode){
-        tbxZipCode.sendKeys(zipcode);
+
+        typeInto(tbxZipCode,zipcode);
     }
     public void clickOnSaveAddress(){
-        btnSaveAddress.click();
+
+        clickOn(btnSaveAddress);
     }
 
     public void verifyAddressChangedSuccessfully(){
         lblAddressSaved.isDisplayed();
     }
     public void clickOnAddNewAddress(){
-        btnAddNewAddress.click();
+
+        clickOn(btnAddNewAddress);
     }
     public void selectProvince(){
-        listProvince.click();
+
+        clickOn(listProvince);
     }
     public void selectProvinceFromList(){
-        listNewyork.click();
+
+        clickOn(listNewyork);
     }
     public void enterPhoneNumber(String phoneNumber){
-        tbxPhoneNumber.sendKeys(phoneNumber.toString());
+
+        typeInto(tbxPhoneNumber,phoneNumber.toString());
+    }
+    public void clickOnMyWishList(){
+        clickOn(lnkMyWishList);
     }
 }
