@@ -47,7 +47,7 @@ public class BaseClass {
         PropertyConfigurator.configure("log4j.properties");
 
         if(br.equals("chrome")) {
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearDriverCache().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
