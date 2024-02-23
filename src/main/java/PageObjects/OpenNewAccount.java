@@ -67,7 +67,7 @@ public class OpenNewAccount extends BaseMethods{
 
     public void enterConfirmPassword(String confirmPassword){
 
-        typeInto(tbxPassword,confirmPassword);
+        typeInto(tbxConfirmPassword,confirmPassword);
     }
     public void clickOnSubmit(){
 
